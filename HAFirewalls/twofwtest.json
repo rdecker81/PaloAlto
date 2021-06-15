@@ -36,7 +36,7 @@
 		"metadata": {
 			"artifactsBaseUrl": ""
 		},
-		"defaultValue": "https://raw.githubusercontent.com/rdecker81/azure/master/vmseries-avset"
+		"defaultValue": "https://raw.githubusercontent.com/rdecker81/PaloAlto/master/vmseries-avset"
 	},
         "dnsNameForPublicIP": {
             "type": "string",
