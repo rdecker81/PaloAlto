@@ -4,7 +4,7 @@
     "parameters": {
               "adminPassword": {
             "type": "securestring",
-			"defaultValue" : "Atmosera123!",
+			"defaultValue" : "",
             "metadata": {
                 "description": "Password for VM-Series administrator"
             }
