@@ -26,7 +26,7 @@
         },
         "availabilitySetName": {
             "type": "string",
-	    "defaultValue": "VMSeriesFwAvSet",
+	    "defaultValue": "FirewallAvSet",
             "metadata": {
                 "description": "Azure Availability Set for VM-Series firewalls"
             }
@@ -303,11 +303,15 @@
 		    "TrustedVIP": "[parameters('trustvip')]",
         "publicIPAddressType": "Static",
         "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]",
-        "nsgname-mgmt": "[concat(parameters('vmName'), '-DefaultNSG')]",
+        "nsgname-mgmt": "[concat(parameters('subnet0Name'), '-DefaultNSG')]",
         "subnet0Ref": "[concat(variables('vnetID'),'/subnets/',parameters('subnet0Name'))]",
+        // used by other template, do not remove
         "subnet1Ref": "[concat(variables('vnetID'),'/subnets/',parameters('subnet1Name'))]",
+        // used by other template, do not remove
         "subnet2Ref": "[concat(variables('vnetID'),'/subnets/',parameters('subnet2Name'))]",
+        // used by other template, do not remove
 		    "subnet3Ref": "[concat(variables('vnetID'),'/subnets/',parameters('subnet3Name'))]",
+        // used by other template, do not remove
         "vm1MgmtAddr": "[parameters('subnet0StartAddress')]",
         "vm2MgmtAddr": "[parameters('vm2MgmtAddress')]",
 	      "storageAccountSetupURL" : "[concat(parameters('baseUrl'),'/storageAccount-',parameters('storageAccountNewOrExisting'),'.json')]",
